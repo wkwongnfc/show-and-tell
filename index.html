@@ -605,23 +605,23 @@
             statusText.textContent = message;
         }
         
-        // Get supported MIME type
+        
         function getSupportedMimeType() {
-            const types = [
-                'video/webm;codecs=vp9,opus',
-                'video/webm;codecs=vp8,opus',
-                'video/webm',
-                'video/mp4'
-            ];
-            
-            for (let type of types) {
-                if (MediaRecorder.isTypeSupported(type)) {
-                    return type;
-                }
-            }
-            
-            return '';
+    const types = [
+        'video/mp4;codecs=avc1', // Attempt MP4 first
+        'video/webm;codecs=vp9,opus',
+        'video/webm;codecs=vp8,opus',
+        'video/webm'
+    ];
+
+    for (let type of types) {
+        if (MediaRecorder.isTypeSupported(type)) {
+            return type;
         }
+    }
+
+    return '';
+}
         
         // Draw combined view on canvas
         function drawCombinedView() {
@@ -864,7 +864,7 @@
                 // Create a temporary link
                 const a = document.createElement('a');
                 a.href = playbackVideo.src;
-                a.download = '我的展示讲解.webm';
+                a.download = '我的展示讲解.mp4';
                 
                 // Append to the document
                 document.body.appendChild(a);
