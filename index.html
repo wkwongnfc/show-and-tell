@@ -350,7 +350,7 @@
     </div>
     
     <div class="container">
-        <h1>小朋友的展示与讲解</h1>
+        <h1>展示与分享</h1>
         
         <!-- Main content container -->
         <div id="mainContainer">
@@ -358,15 +358,15 @@
                 <!-- Left side - image upload -->
                 <div class="flex-col">
                     <div class="panel pink-panel">
-                        <h2>我的展示物</h2>
+                        <h2>作品展示</h2>
                         <div id="imageContainer" class="media-container" style="cursor: pointer;">
                             <div id="imagePlaceholder" class="placeholder">
                                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                                 </svg>
-                                <p>点击这里上传你的展示物</p>
+                                <p>点击这里上传你的作品</p>
                             </div>
-                            <img id="uploadedImage" class="contain hidden" src="" alt="展示物">
+                            <img id="uploadedImage" class="contain hidden" src="" alt="作品">
                             <input type="file" id="fileInput" class="file-input" accept="image/*">
                         </div>
                     </div>
@@ -382,7 +382,7 @@
                                 <svg fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
                                 </svg>
-                                <p>点击"开始"按钮显示你的脸</p>
+                                <p>点击"开始录制"按钮显示你的脸</p>
                             </div>
                         </div>
                     </div>
@@ -402,41 +402,42 @@
                 <button id="stopButton" class="btn btn-red hidden">停止录制</button>
             </div>
             
-            <p>点击"开始录制"按钮，讲解你的展示物</p>
+            <p>点击"开始录制"按钮，讲解你的作品</p>
         </div>
         
         <!-- Recording in progress screen -->
         <div id="recordingContainer" class="hidden">
-            <div class="flex-row">
-                <div class="flex-col">
-                    <div class="panel blue-panel">
-                        <div class="recording-indicator">
-                            <div class="recording-dot"></div>
-                            <span style="color: #f44336; font-weight: bold;">录制中</span>
-                        </div>
-                        <div class="media-container">
-                            <div class="combined-container">
-                                <canvas id="combinedCanvas"></canvas>
-                                <video id="recordingWebcam" autoplay playsinline muted></video>
-                            </div>
-                        </div>
-                    </div>
+    <div class="flex-row">
+        <div class="flex-col">
+            <div class="panel pink-panel">
+                <h2>我的展示物</h2>
+                <div class="media-container">
+                    <img id="recordingImage" class="contain" src="" alt="展示物">
                 </div>
-                
-                <div class="flex-col">
-                    <div class="panel pink-panel">
-                        <h2>我的展示物</h2>
-                        <div class="media-container">
-                            <img id="recordingImage" class="contain" src="" alt="展示物">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="btn-center">
-                <button id="recordingStopButton" class="btn btn-red">停止录制</button>
             </div>
         </div>
+        
+        <div class="flex-col">
+            <div class="panel blue-panel">
+                <div class="recording-indicator">
+                    <div class="recording-dot"></div>
+                    <span style="color: #f44336; font-weight: bold;">录制中</span>
+                </div>
+                <div class="media-container">
+                    <div class="combined-container">
+                        <canvas id="combinedCanvas"></canvas>
+                        <video id="recordingWebcam" autoplay playsinline muted></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    
+    <div class="btn-center">
+        <button id="recordingStopButton" class="btn btn-red">停止录制</button>
+    </div>
+</div>
         
         <!-- Playback screen -->
         <div id="playbackContainer" class="hidden">
