@@ -355,23 +355,7 @@
         <!-- Main content container -->
         <div id="mainContainer">
             <div class="flex-row">
-                <!-- Left side - webcam -->
-                <div class="flex-col">
-                    <div class="panel blue-panel">
-                        <h2>我的脸</h2>
-                        <div id="webcamContainer" class="media-container">
-                            <video id="webcam" class="hidden" autoplay playsinline muted></video>
-                            <div id="webcamPlaceholder" class="placeholder">
-                                <svg fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
-                                </svg>
-                                <p>点击"开始"按钮显示你的脸</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Right side - image upload -->
+                <!-- Left side - image upload -->
                 <div class="flex-col">
                     <div class="panel pink-panel">
                         <h2>我的展示物</h2>
@@ -384,6 +368,22 @@
                             </div>
                             <img id="uploadedImage" class="contain hidden" src="" alt="展示物">
                             <input type="file" id="fileInput" class="file-input" accept="image/*">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right side - image upload -->
+                <div class="flex-col">
+                    <div class="panel blue-panel">
+                        <h2>我的脸</h2>
+                        <div id="webcamContainer" class="media-container">
+                            <video id="webcam" class="hidden" autoplay playsinline muted></video>
+                            <div id="webcamPlaceholder" class="placeholder">
+                                <svg fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                                </svg>
+                                <p>点击"开始"按钮显示你的脸</p>
+                            </div>
                         </div>
                     </div>
                 </div>
